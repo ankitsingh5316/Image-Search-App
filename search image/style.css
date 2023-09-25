@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Add a background color for better readability */
+    padding: 20px; /* Add some padding to the body */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 30px 0; /* Adjust the margin for better spacing */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow the form elements to wrap to the next line on smaller screens */
+    margin-bottom: 30px; /* Adjust the margin for better spacing */
+}
+
+#search-input {
+    flex: 1; /* Take up remaining space in the row */
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    font-size: 18px;
+    color: #333;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #138013;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.search-result {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-class {
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.search-result img {
+    width: 100%;
+    height: 200px; /* Maintain the image's aspect ratio */
+    object-fit: cover;
+   
+}
+
+.search-result:hover img {
+    opacity: 0.8;
+}
+
+.search-result a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#show-more-button {
+    background-color: #008cba;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 20px auto; /* Adjust the margin for better spacing */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .search-result {
+        padding: 20px;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-result {
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column; /* Stack form elements vertically on smaller screens */
+        align-items: flex-start; /* Adjust alignment for better readability */
+    }
+
+    #search-input {
+        width: 100%; /* Full width for input field */
+        margin-bottom: 10px; /* Adjust spacing between input and button */
+    }
+
+    #search-button {
+        width: 100%; /* Full width for button */
+        margin-left: 0; /* Remove margin for button */
+    }
+}
